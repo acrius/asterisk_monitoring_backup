@@ -1,6 +1,6 @@
 from timing import YEAR, MONTH, DAY
 
-ASTERISK_MONITORING_PATH = r'C:\Users\bda.DOKENISEY\Documents\dev\asterisk_monitoring_backup\monitor'
+ASTERISK_MONITORING_PATH = r'/var/spool/asterisk/monitoring/'
 
 SAVE_LAST = MONTH
 SAVE_LAST_TIME = 1
