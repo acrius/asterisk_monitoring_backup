@@ -1,0 +1,10 @@
+[Unit]
+Description=Backup asterisk monitoring audio records
+After=freepbx.service
+
+[Service]
+Type=simple
+ExecStart=/home/admindok/dev/asterisk_monitoring_backup/server.sh
+
+[Install]
+WantedBy=multi-user.target

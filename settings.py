@@ -1,0 +1,16 @@
+from timing import YEAR, MONTH, DAY
+
+ASTERISK_MONITORING_PATH = r'C:\Users\bda.DOKENISEY\Documents\dev\asterisk_monitoring_backup\monitor'
+
+SAVE_LAST = MONTH
+SAVE_LAST_TIME = 1
+
+DISTANCE_HOST = ''
+DISTANCE_HOST_PORT = 22
+DISTANCE_HOST_USERNAME = ''
+DISTANCE_HOST_PASSWORD = ''
+DISTANCE_HOST_PATH = ''
+
+UPDATE_EVERY_DAYS = 1
+
+LOG_PATH = 'backup.log'
