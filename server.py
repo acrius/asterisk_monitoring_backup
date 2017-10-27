@@ -5,6 +5,7 @@ from time import sleep
 from paramiko import SSHClient, AutoAddPolicy
 from scp import SCPClient
 from schedule import Scheduler
+from logging.handlers import RotatingFileHandler
 import logging
 
 from timing import YEAR, MONTH, DAY
@@ -15,8 +16,10 @@ from settings import DISTANCE_HOST, DISTANCE_HOST_PORT,\
 
 
 def build_logging():
+    handler = RotatingFileHandler(LOG_PATH, mode='a', maxBytes=5*1024*1024,
+                                  backupCount=2, encoding=None, delay=0)
     logging.basicConfig(format='%(filename)s[LINE:%(lineno)d]# %(levelname)-8s [%(asctime)s] %(message)s',
-                       level=logging.DEBUG, filename=LOG_PATH)
+                        level=logging.DEBUG, handlers=[handler, ])
 
 build_logging()
 
